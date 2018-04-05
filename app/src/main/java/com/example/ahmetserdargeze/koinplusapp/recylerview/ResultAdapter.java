@@ -25,6 +25,9 @@ public class ResultAdapter extends RecyclerView.Adapter<SimpleViewHolder> {
 
     }
 
+    public void setDataSet(ArrayList<Rv_object_coin> dataSet) {
+        this.dataSet = dataSet;
+    }
 
     @Override
     public SimpleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

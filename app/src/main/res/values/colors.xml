@@ -6,4 +6,5 @@
     <color name="textcolor">#a4de9a</color>
     <color name="toolbar_bg">#32ff7e</color>
     <color name="toolbar_button_bg">#1e90ff</color>
+    <color name="topBarSelected">#fd9644</color>
 </resources>
