@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context="com.example.ahmetserdargeze.koinplusapp.LoginorRegisterFragment">
+    tools:context="com.example.ahmetserdargeze.koinplusapp.Fragments.LoginorRegisterFragment">
 
     <LinearLayout
         android:layout_width="wrap_content"

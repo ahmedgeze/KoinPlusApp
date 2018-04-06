@@ -6,6 +6,8 @@ import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.ahmetserdargeze.koinplusapp.Fragments.LoginFragment;
+
 public class LoginorRegisterActivity extends AppCompatActivity {
 
     @Override

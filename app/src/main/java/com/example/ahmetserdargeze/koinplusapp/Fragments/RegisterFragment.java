@@ -1,4 +1,4 @@
-package com.example.ahmetserdargeze.koinplusapp;
+package com.example.ahmetserdargeze.koinplusapp.Fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.ahmetserdargeze.koinplusapp.LoginorRegisterActivity;
+import com.example.ahmetserdargeze.koinplusapp.R;
+import com.example.ahmetserdargeze.koinplusapp.models.RegisterationPojo;
 import com.example.ahmetserdargeze.koinplusapp.retrofit.APIService;
 import com.example.ahmetserdargeze.koinplusapp.retrofit.ApiUtils;
 

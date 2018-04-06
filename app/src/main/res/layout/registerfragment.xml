@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#123a30"
-    tools:context="com.example.ahmetserdargeze.koinplusapp.RegisterFragment"
+    tools:context="com.example.ahmetserdargeze.koinplusapp.Fragments.RegisterFragment"
 
     >
     <ImageView

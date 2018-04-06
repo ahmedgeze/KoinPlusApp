@@ -1,6 +1,5 @@
 package com.example.ahmetserdargeze.koinplusapp.recylerview;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ahmetserdargeze.koinplusapp.R;
-import com.example.ahmetserdargeze.koinplusapp.Rv_object_coin;
+import com.example.ahmetserdargeze.koinplusapp.models.Rv_object_coin;
 
 import java.util.ArrayList;
 

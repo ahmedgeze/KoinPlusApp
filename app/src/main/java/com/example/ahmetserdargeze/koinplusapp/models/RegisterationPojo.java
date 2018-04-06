@@ -1,4 +1,4 @@
-package com.example.ahmetserdargeze.koinplusapp;
+package com.example.ahmetserdargeze.koinplusapp.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

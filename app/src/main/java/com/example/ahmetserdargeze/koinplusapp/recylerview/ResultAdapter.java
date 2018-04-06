@@ -1,13 +1,26 @@
 package com.example.ahmetserdargeze.koinplusapp.recylerview;
 
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.ahmetserdargeze.koinplusapp.R;
-import com.example.ahmetserdargeze.koinplusapp.Rv_object_coin;
+import com.example.ahmetserdargeze.koinplusapp.models.ChildDataItem;
+import com.example.ahmetserdargeze.koinplusapp.models.Rv_object_coin;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
+import android.graphics.Color;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,9 +33,24 @@ public class ResultAdapter extends RecyclerView.Adapter<SimpleViewHolder> {
 
     private ArrayList<Rv_object_coin> dataSet;
 
+    private ArrayList<ChildDataItem> childDataItems;
+
+    List<ChildDataItem> entries=new ArrayList<ChildDataItem>();
+    LineDataSet set1;
+
+
+
+
+
+
     public ResultAdapter(ArrayList<Rv_object_coin> dataArgs){
         this.dataSet=dataArgs;
 
+    }
+
+    public ResultAdapter(ArrayList<Rv_object_coin> dataSet, ArrayList<ChildDataItem> childDataItems) {
+        this.dataSet = dataSet;
+        this.childDataItems = childDataItems;
     }
 
     public void setDataSet(ArrayList<Rv_object_coin> dataSet) {
@@ -37,12 +65,19 @@ public class ResultAdapter extends RecyclerView.Adapter<SimpleViewHolder> {
 
         return new SimpleViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(SimpleViewHolder holder, int position) {
 //        final SimpleViewHolder holder1=holder;
+
         Rv_object_coin coin=dataSet.get(position);
-        holder.setData(coin,position);
+        holder.setDataa(coin,position);
+
+
+
+
+
+
+
 //        holder1.coin_name.setText(dataSet.get(position).getKoinIdKoinName()+"");
 //        holder1.coin_price.setText(dataSet.get(position).getLast()+"");
 //        holder1.change.setText(dataSet.get(position).getChange()+"");
@@ -61,4 +96,15 @@ public class ResultAdapter extends RecyclerView.Adapter<SimpleViewHolder> {
     public int getItemCount() {
         return dataSet.size();
     }
+
+
+
+
+
+
+
+
 }
+
+
+

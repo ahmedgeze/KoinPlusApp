@@ -1,6 +1,5 @@
-package com.example.ahmetserdargeze.koinplusapp;
+package com.example.ahmetserdargeze.koinplusapp.Fragments;
 
-import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +10,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.ahmetserdargeze.koinplusapp.LoginorRegisterActivity;
+import com.example.ahmetserdargeze.koinplusapp.MainActivity;
+import com.example.ahmetserdargeze.koinplusapp.R;
 
 /**
  * Created by ahmetserdargeze on 07.03.2018.

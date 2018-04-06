@@ -1,10 +1,9 @@
 package com.example.ahmetserdargeze.koinplusapp.retrofit;
 
-import com.example.ahmetserdargeze.koinplusapp.RegisterationPojo;
-import com.example.ahmetserdargeze.koinplusapp.Result;
+import com.example.ahmetserdargeze.koinplusapp.models.RegisterationPojo;
+import com.example.ahmetserdargeze.koinplusapp.models.Result;
 
 import retrofit2.Call;
-import retrofit2.Callback;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;

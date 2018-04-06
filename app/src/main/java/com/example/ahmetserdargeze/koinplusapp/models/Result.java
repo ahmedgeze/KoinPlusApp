@@ -1,10 +1,9 @@
-package com.example.ahmetserdargeze.koinplusapp;
+package com.example.ahmetserdargeze.koinplusapp.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by ahmetserdargeze on 28.03.2018.
@@ -18,8 +17,7 @@ public class Result {
     @Expose
     public ArrayList<Rv_object_coin> result = null;
 
-    public Result() {
-    }
+
 
 
 
@@ -38,5 +36,7 @@ public class Result {
     public void setResult(ArrayList<Rv_object_coin> result) {
         this.result = result;
     }
+
+
 
 }

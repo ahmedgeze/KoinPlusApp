@@ -1,7 +1,6 @@
 package com.example.ahmetserdargeze.koinplusapp;
 
 import android.app.Fragment;
-import android.app.FragmentContainer;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 //import android.support.v7.app.AppCompatActivity;
@@ -10,12 +9,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import com.example.ahmetserdargeze.koinplusapp.Fragments.Bottombar_fragment;
+import com.example.ahmetserdargeze.koinplusapp.Fragments.usdt_coin_fragment;
+
 import java.util.Date;
 
 

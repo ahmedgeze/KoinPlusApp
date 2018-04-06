@@ -1,7 +1,9 @@
-package com.example.ahmetserdargeze.koinplusapp;
+package com.example.ahmetserdargeze.koinplusapp.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.ArrayList;
 
 /**
  * Created by ahmetserdargeze on 10.03.2018.
@@ -36,6 +38,8 @@ public class Rv_object_coin {
     @Expose
     public String volume;
 
+
+
     public Rv_object_coin(String high, String last, String time, String baseVolume, String kurIdKurName, String low, String koinIdKoinName, String change, String volume) {
         this.high = high;
         this.last = last;
@@ -47,6 +51,8 @@ public class Rv_object_coin {
         this.change = change;
         this.volume = volume;
     }
+
+
 
     public String getHigh() {
         return high;
@@ -119,6 +125,8 @@ public class Rv_object_coin {
     public void setVolume(String volume) {
         this.volume = volume;
     }
+
+
 
     @Override
     public String toString() {

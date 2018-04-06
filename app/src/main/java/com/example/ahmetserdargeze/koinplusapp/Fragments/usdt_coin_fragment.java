@@ -1,4 +1,4 @@
-package com.example.ahmetserdargeze.koinplusapp;
+package com.example.ahmetserdargeze.koinplusapp.Fragments;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
@@ -7,21 +7,29 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.ahmetserdargeze.koinplusapp.R;
+import com.example.ahmetserdargeze.koinplusapp.models.ChildDataItem;
+import com.example.ahmetserdargeze.koinplusapp.models.Result;
+import com.example.ahmetserdargeze.koinplusapp.models.Rv_object_coin;
+import com.example.ahmetserdargeze.koinplusapp.recylerview.MarketAdapter;
 import com.example.ahmetserdargeze.koinplusapp.recylerview.ResultAdapter;
 import com.example.ahmetserdargeze.koinplusapp.retrofit.APIService;
 import com.example.ahmetserdargeze.koinplusapp.retrofit.ApiUtils;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import  java.util.Random;
 
 /**
  * Created by ahmetserdargeze on 10.03.2018.
@@ -44,8 +52,8 @@ public class usdt_coin_fragment extends Fragment {
     RecyclerView.LayoutManager mLayoutManager;
 
     ResultAdapter usdtAdapter;
-    ResultAdapter btcAdapter;
-    ResultAdapter ethAdapter;
+    MarketAdapter btcAdapter;
+    MarketAdapter ethAdapter;
 
 
     Result usdt_response =new Result();
@@ -58,19 +66,8 @@ public class usdt_coin_fragment extends Fragment {
     ArrayList<Rv_object_coin> result_ETHresponse =new ArrayList<Rv_object_coin>();
     ArrayList<Rv_object_coin> result_BTCresponse =new ArrayList<Rv_object_coin>();
 
-
-    List<Rv_object_coin> result_response_two=new ArrayList<Rv_object_coin>();
-    Rv_object_coin object_coin;
-
-
-
-
-
-
-
-
-
-
+    ChildDataItem childDataItem;
+    ArrayList<ChildDataItem> list;
 
 
 
@@ -78,9 +75,14 @@ public class usdt_coin_fragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 //        onClickETH =(LinearLayout) view.findViewById(R.id.topEthLay);
 //        onClickUSDT =(LinearLayout) view.findViewById(R.id.topUsdtLay);
 //        onClickBTC=(LinearLayout) view.findViewById(R.id.topBtcLay);
+
+
+
+
 
 
 
@@ -96,6 +98,11 @@ public class usdt_coin_fragment extends Fragment {
         usdtcoinrecyler=(RecyclerView) view.findViewById(R.id.ucf_usdtcoinrecyler);
 
 
+        list =new ArrayList<ChildDataItem>();
+        int n;
+
+
+
         mLayoutManager=new LinearLayoutManager(getActivity());
 
 
@@ -105,7 +112,9 @@ public class usdt_coin_fragment extends Fragment {
             public void onResponse(Call<Result> call, Response<Result> response) {
                 usdt_response =response.body();
                 result_USDresponse = usdt_response.getResult();
-                usdtAdapter = new ResultAdapter(result_USDresponse);
+                String y=result_USDresponse.size()+"";
+                Log.i("dolar boyutu",y);
+                usdtAdapter = new ResultAdapter(result_USDresponse,list);
                 usdtcoinrecyler.setLayoutManager(mLayoutManager);
                 usdtcoinrecyler.setItemAnimator(new DefaultItemAnimator());
                 usdtcoinrecyler.setAdapter(usdtAdapter);
@@ -157,7 +166,7 @@ public class usdt_coin_fragment extends Fragment {
                     public void onResponse(Call<Result> call, Response<Result> response) {
                         btc_response=response.body();
                         result_BTCresponse=btc_response.getResult();
-                        btcAdapter=new ResultAdapter(result_BTCresponse);
+                        btcAdapter=new MarketAdapter(result_BTCresponse);
                         usdtcoinrecyler.setLayoutManager(mLayoutManager);
                         usdtcoinrecyler.setItemAnimator(new DefaultItemAnimator());
                         usdtcoinrecyler.setAdapter(btcAdapter);
@@ -184,7 +193,7 @@ public class usdt_coin_fragment extends Fragment {
                     public void onResponse(Call<Result> call, Response<Result> response) {
                         eth_response=response.body();
                         result_ETHresponse=eth_response.getResult();
-                        ethAdapter=new ResultAdapter(result_ETHresponse);
+                        ethAdapter=new MarketAdapter(result_ETHresponse);
                         usdtcoinrecyler.setLayoutManager(mLayoutManager);
                         usdtcoinrecyler.setItemAnimator(new DefaultItemAnimator());
                         usdtcoinrecyler.setAdapter(ethAdapter);
