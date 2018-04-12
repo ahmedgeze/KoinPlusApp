@@ -7,4 +7,7 @@
     <color name="toolbar_bg">#32ff7e</color>
     <color name="toolbar_button_bg">#1e90ff</color>
     <color name="topBarSelected">#fd9644</color>
+    <color name="graphicBackground">#0594d9</color>
+    <color name="graphicLine">#66a548</color>
+
 </resources>

@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:weightSum="6">
+        android:weightSum="7">
         <LinearLayout
             android:id="@+id/topBtcLay"
             android:layout_width="0dp"
@@ -73,6 +73,30 @@
                 android:gravity="center"
                 android:text="USDT"
                 android:textSize="13sp"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/topFavStar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:hapticFeedbackEnabled="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/star_new"
+
+                />
+
 
 
 

@@ -1,7 +1,10 @@
 package com.example.ahmetserdargeze.koinplusapp.retrofit;
 
+import com.example.ahmetserdargeze.koinplusapp.models.Real_graphic_data;
 import com.example.ahmetserdargeze.koinplusapp.models.RegisterationPojo;
 import com.example.ahmetserdargeze.koinplusapp.models.Result;
+import com.example.ahmetserdargeze.koinplusapp.models.SingleCoinBody;
+import com.example.ahmetserdargeze.koinplusapp.models.SingleCoinResult;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -30,5 +33,12 @@ public interface APIService {
     @GET("top25/{kur_type}/")
     Call<Result> getCoinWithType(@Path("kur_type") String kur_type);
 //    void  getCoinWithType(@Path("kur_type") String kur_type, Callback<Result>cb);
+
+    @GET("graphic/{kur_type}/{koin_type}")
+    Call<Real_graphic_data> getRealTimePrice(@Path("kur_type") String kur_type, @Path("koin_type") String koin_type);
+
+    @GET("getCoin/{kur_type}/{koin_type}/")
+    Call<SingleCoinBody> getSingleCoin(@Path("kur_type") String kur_type, @Path("koin_type") String koin_type);
+
 
 }

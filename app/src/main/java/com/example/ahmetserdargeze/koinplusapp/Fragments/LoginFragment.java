@@ -22,16 +22,27 @@ import com.example.ahmetserdargeze.koinplusapp.R;
 public class LoginFragment  extends Fragment{
     View view;
     Button lf_login_button;
-    TextView lf_noaccount_textview;
+    TextView lf_noaccount_textview,textView1;
 
 
 
 
-
+    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         view=inflater.inflate(R.layout.loginfragment,container,false);
+
+        textView1=(TextView)view.findViewById(R.id.textView1);
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                ((LoginorRegisterActivity)getActivity()).loadFragment(new Graphic_Fragment(),R.id.frame_layout_container);
+
+            }
+        });
+
+
 
         lf_login_button=(Button) view.findViewById(R.id.lf_login_button);
         lf_noaccount_textview=(TextView) view.findViewById(R.id.lf_noaccount_textview);

@@ -8,11 +8,13 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.widget.Button;
 
 import com.example.ahmetserdargeze.koinplusapp.Fragments.Bottombar_fragment;
-import com.example.ahmetserdargeze.koinplusapp.Fragments.usdt_coin_fragment;
+import com.example.ahmetserdargeze.koinplusapp.Fragments.Coin_fragment;
+import com.example.ahmetserdargeze.koinplusapp.data.FavCoinModel;
 
 import java.util.Date;
 
@@ -29,8 +31,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loadFragment(new usdt_coin_fragment(),R.id.frame_Layout_Topbar);
+        loadFragment(new Coin_fragment(),R.id.frame_Layout_Topbar);
         loadFragment(new Bottombar_fragment(),R.id.bottom_bar);
+
+
+
+
 
 
 

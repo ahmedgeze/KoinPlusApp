@@ -22,7 +22,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_gravity="center"
-                    android:weightSum="21"
+                    android:weightSum="22"
                     >
 
                     <ImageView
@@ -93,17 +93,7 @@
                         android:layout_marginBottom="10px"
                         android:layout_weight="4"/>
 
-                    <ImageView
-                        android:id="@+id/alarm"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="10px"
-                        android:layout_marginLeft="30px"
-                        android:layout_marginTop="10px"
-                        android:layout_marginBottom="10px"
 
-                        android:src="@drawable/if_alarm_408410"
-                        android:layout_weight="3"/>
 
 
 
@@ -113,31 +103,50 @@
                 <LinearLayout
                     android:id="@+id/rv_child_items"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="30dp"
                     android:orientation="horizontal"
                     android:layout_gravity="bottom"
-                    android:weightSum="80"
+                    android:background="@color/textcolor"
+                    android:weightSum="120"
                     >
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:weightSum="80"
-                        >
-                        <com.github.mikephil.charting.charts.BarChart
-                            android:id="@+id/chart"
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:gravity="center"-->
+                        <!--android:weightSum="80"-->
+                        <!--&gt;-->
+                        <ImageView
+                            android:id="@+id/add_fav"
                             android:layout_width="match_parent"
-                            android:layout_height="200dp" />
-                        <TextView
-                            android:id="@+id/grafik_value"
-                            android:textColor="@color/textcolor"
-                            android:background="@color/toolbar_bg"
+                            android:layout_height="25dp"
+                            android:layout_weight="40"
+                            android:layout_marginTop="2.5dp"
+                            android:layout_marginBottom="2.5dp"
+                            android:src="@drawable/star_new"/>
+
+                        <ImageView
+                            android:id="@+id/go_to_chart"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="80"
+                            android:layout_height="25dp"
+                            android:layout_weight="40"
+                            android:layout_marginTop="2.5dp"
+                            android:layout_marginBottom="2.5dp"
+                            android:src="@drawable/charticon"
                             />
+
+                         <ImageView
+                             android:id="@+id/alarm"
+                             android:layout_width="match_parent"
+                             android:layout_height="25dp"
+                             android:layout_weight="40"
+                             android:layout_marginTop="2.5dp"
+                             android:layout_marginBottom="2.5dp"
+                             android:src="@drawable/alarm_new"
+                             />
+
+
 
 
 
@@ -151,7 +160,7 @@
 
 
 
-                </LinearLayout>
+                <!--</LinearLayout>-->
 
 
 
