@@ -41,4 +41,8 @@ public interface APIService {
     Call<SingleCoinBody> getSingleCoin(@Path("kur_type") String kur_type, @Path("koin_type") String koin_type);
 
 
+
+
+
+
 }

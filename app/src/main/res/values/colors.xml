@@ -9,5 +9,8 @@
     <color name="topBarSelected">#fd9644</color>
     <color name="graphicBackground">#0594d9</color>
     <color name="graphicLine">#66a548</color>
+    <color name="layout_bg">#ff5500</color>
+    <color name="dialog_bg">#00b0ff</color>
+    <color name="dialog_button">#ff5500</color>
 
 </resources>

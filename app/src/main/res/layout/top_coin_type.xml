@@ -93,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/star_new"
+                android:src="@drawable/star_fill_gl"
 
                 />
 

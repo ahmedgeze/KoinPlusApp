@@ -1,6 +1,5 @@
 package com.example.ahmetserdargeze.koinplusapp.Fragments;
 
-import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 
 import com.example.ahmetserdargeze.koinplusapp.R;
 import com.example.ahmetserdargeze.koinplusapp.data.Database;
@@ -24,7 +22,6 @@ import com.example.ahmetserdargeze.koinplusapp.models.Rv_object_coin;
 import com.example.ahmetserdargeze.koinplusapp.models.SingleCoinBody;
 import com.example.ahmetserdargeze.koinplusapp.models.SingleCoinResult;
 import com.example.ahmetserdargeze.koinplusapp.recylerview.BtcAdapter;
-import com.example.ahmetserdargeze.koinplusapp.recylerview.EthAdapter;
 import com.example.ahmetserdargeze.koinplusapp.recylerview.ResultAdapter;
 import com.example.ahmetserdargeze.koinplusapp.retrofit.APIService;
 import com.example.ahmetserdargeze.koinplusapp.retrofit.ApiUtils;
@@ -79,8 +76,8 @@ public class Coin_fragment extends Fragment {
     ArrayList<Rv_object_coin> result_BTCresponse =new ArrayList<Rv_object_coin>();
 
     SingleCoinBody favBody_usdt =new SingleCoinBody();
-    ArrayList<SingleCoinResult> favList_usdt =new ArrayList<SingleCoinResult>();
     SingleCoinResult favResult_usdt =new SingleCoinResult();
+    ArrayList<SingleCoinResult> favList_usdt =new ArrayList<SingleCoinResult>();
 
     SingleCoinBody favBody_eth =new SingleCoinBody();
     ArrayList<SingleCoinResult> favList_eth =new ArrayList<SingleCoinResult>();
@@ -241,7 +238,7 @@ public class Coin_fragment extends Fragment {
 
 
                 } else if (FavCoinModel.getFav_state() == 0) {
-                    topStar.setBackgroundResource(R.drawable.star_new);
+                    topStar.setBackgroundResource(R.drawable.star_fill_gl);
                     favList_usdt.clear();
                     usdtcoinrecyler.getAdapter().notifyDataSetChanged();
 
@@ -339,7 +336,7 @@ public class Coin_fragment extends Fragment {
 
 
                 } else if (FavCoinModel.getFav_state() == 0) {
-                    topStar.setBackgroundResource(R.drawable.star_new);
+                    topStar.setBackgroundResource(R.drawable.star_fill_gl);
                     favList_btc.clear();
                     usdtcoinrecyler.getAdapter().notifyDataSetChanged();
 
@@ -436,7 +433,7 @@ public class Coin_fragment extends Fragment {
 
 
                 } else if (FavCoinModel.getFav_state() == 0) {
-                    topStar.setBackgroundResource(R.drawable.star_new);
+                    topStar.setBackgroundResource(R.drawable.star_fill_gl);
                     favList_eth.clear();
                     usdtcoinrecyler.getAdapter().notifyDataSetChanged();
 
@@ -533,7 +530,7 @@ public class Coin_fragment extends Fragment {
 
                 }
                 else if(FavCoinModel.getFav_state()==0){
-                    topStar.setBackgroundResource(R.drawable.star_new);
+                    topStar.setBackgroundResource(R.drawable.star_fill_gl);
                     favList_usdt.clear();
                     usdtcoinrecyler.getAdapter().notifyDataSetChanged();
 
