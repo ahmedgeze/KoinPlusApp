@@ -81,15 +81,15 @@ public class SimpleViewHolder extends RecyclerView.ViewHolder implements View.On
                 break;
         }
 
-        db.openCon();
-        int i=db.controlWithName(clickedObject.getKoinIdKoinName(),Global_state_var.getCoin()+"");
-        db.closeCon();
-
-        if(i==1){
-            this.add_fav.setImageResource(R.drawable.star_fill);
-        }else {
-            this.add_fav.setImageResource(R.drawable.star_new);
-        }
+//        db.openCon();
+//        int i=db.controlWithName(clickedObject.getKoinIdKoinName(),Global_state_var.getCoin()+"");
+//        db.closeCon();
+//
+//        if(i==1){
+//            this.add_fav.setImageResource(R.drawable.star_fill);
+//        }else {
+//            this.add_fav.setImageResource(R.drawable.star_new);
+//        }
 
 
         this.coin_name.setText(clickedObject.getKoinIdKoinName()+"");

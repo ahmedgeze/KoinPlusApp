@@ -1,6 +1,15 @@
 package com.example.ahmetserdargeze.koinplusapp.Fragments;
 
+import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.ahmetserdargeze.koinplusapp.ActivityGlobal;
 import com.example.ahmetserdargeze.koinplusapp.R;
 import com.example.ahmetserdargeze.koinplusapp.data.Database;
 import com.example.ahmetserdargeze.koinplusapp.data.FavCoinModel;
@@ -20,6 +30,7 @@ import com.example.ahmetserdargeze.koinplusapp.models.Result;
 import com.example.ahmetserdargeze.koinplusapp.models.Rv_object_coin;
 import com.example.ahmetserdargeze.koinplusapp.models.SingleCoinBody;
 import com.example.ahmetserdargeze.koinplusapp.models.SingleCoinResult;
+import com.example.ahmetserdargeze.koinplusapp.notification.MyTestService;
 import com.example.ahmetserdargeze.koinplusapp.recylerview.BtcAdapter;
 import com.example.ahmetserdargeze.koinplusapp.recylerview.ResultAdapter;
 import com.example.ahmetserdargeze.koinplusapp.retrofit.APIService;
@@ -108,6 +119,58 @@ public class Global_market_fragment extends android.app.Fragment {
 
         getCoin("USDT");
 
+        start();
+
+
+
+
+
+//        NotificationManager mNotificationManager = (NotificationManager) getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
+//
+//// The id of the channel.
+//        String id = "my_channel_01";
+//
+//// The user-visible name of the channel.
+//        CharSequence name = getString(R.string.channel_name);
+//
+//// The user-visible description of the channel.
+//        String description = getString(R.string.channel_description);
+//
+//        int importance = NotificationManager.IMPORTANCE_LOW;
+//
+//        NotificationChannel mChannel = new NotificationChannel(id, name,importance);
+//
+//// Configure the notification channel.
+//        mChannel.setDescription(description);
+//
+//        mChannel.enableLights(true);
+//// Sets the notification light color for notifications posted to this
+//// channel, if the device supports this feature.
+//        mChannel.setLightColor(Color.RED);
+//
+//        mChannel.enableVibration(true);
+//        mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+//
+//        mNotificationManager.createNotificationChannel(mChannel);
+//
+//        mNotificationManager = (NotificationManager)getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
+//
+//// Sets an ID for the notification, so it can be updated.
+//        int notifyID = 1;
+//
+//// The id of the channel.
+//        String CHANNEL_ID = "my_channel_01";
+//
+//// Create a notification and set the notification channel.
+//        Notification notification = new Notification.Builder(getContext(),CHANNEL_ID)
+//                .setContentTitle("New Message")
+//                .setContentText("You've received new messages.")
+//                .setSmallIcon(R.drawable.alarm_new)
+//                .setChannelId(CHANNEL_ID)
+//                .build();
+//
+//// Issue the notification.
+//        mNotificationManager.notify(3, notification);
 
 
 
@@ -418,6 +481,14 @@ public class Global_market_fragment extends android.app.Fragment {
             Log.i("Koin",favcoin_list_a.get(i).getKoin_name()+favcoin_list_a.get(i).getKur());
 
         return  favcoin_list_a;
+
+    }
+
+    public void  start(){
+        AlarmManager manager=(AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE);
+        Intent myIntent=new Intent(getContext(),MyTestService.class);
+        PendingIntent pendingIntent=PendingIntent.getService(getContext(),0,myIntent,0);
+        manager.setInexactRepeating(AlarmManager.RTC_WAKEUP, SystemClock.elapsedRealtime(),500,pendingIntent);
 
     }
 
